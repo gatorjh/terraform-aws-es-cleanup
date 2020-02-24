@@ -51,6 +51,7 @@ resource "aws_iam_policy" "policy" {
 
 resource "aws_iam_role" "role" {
   name = "${var.prefix}es-cleanup${var.suffix}"
+  permissions_boundary = var.permissions_boundary
 
   assume_role_policy = <<EOF
 {
