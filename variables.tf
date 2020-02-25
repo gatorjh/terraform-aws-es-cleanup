@@ -56,3 +56,7 @@ variable "tags" {
   }
 }
 
+variable "permissions_boundary" {
+  description = "ARN for permission boundary policy"
+  default     = ""
+}
